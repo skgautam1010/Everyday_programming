@@ -1,6 +1,9 @@
 
 
 /*
+
+can also be solved using binary search technique
+
 Median in a row-wise sorted Matrix
 Medium Accuracy: 55.5% Submissions: 5665 Points: 4
 
