@@ -107,6 +107,10 @@ public:
                 {
                     reverse(v.begin()+i,v.begin()+k+i);
                 }
+                else if(i<n)
+                {
+                    std::reverse(arr.begin()+i,arr.end());
+                }
             }
         }
         ListNode *l=new ListNode(-1);
