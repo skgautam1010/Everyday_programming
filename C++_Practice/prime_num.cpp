@@ -7,7 +7,7 @@ int main()
 {
     int num;
     cin>>num;
-    cout<<sqrt(num)<<endl;
+    //cout<<sqrt(num)<<endl;
     int i,flag=0;
     for(i=2;i<=sqrt(num);i++)
     {
