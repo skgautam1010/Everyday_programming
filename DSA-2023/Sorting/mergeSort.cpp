@@ -59,21 +59,3 @@ void mergeSort(vector<int> &arr, int l, int r) {
     
 }
 
-int main()
-{
-    vector<int>v;
-    int n,val;
-    cin>>n;
-
-    for(int i=0;i<n;i++)
-    {
-        cin>>val;
-        v.push_back(val);
-    }
-
-    mergeSort(v,0,n);
-    for(int i=0;i<n;i++)
-    {
-        cout<<v[i]<<" ";
-    }
-}
