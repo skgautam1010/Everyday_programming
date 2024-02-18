@@ -5,7 +5,7 @@ using namespace std;
 vector<int> rotateArray(vector<int>& arr, int n) {
     // Write your code here.
    
-    //Brute Force Approach
+    //one Approach
 
     int temp=arr[0];
     for(int i=0;i<n;i++)
@@ -21,7 +21,18 @@ vector<int> rotateArray(vector<int>& arr, int n) {
     return arr;
 
 
-    //Optimal Approach
+    //Another Approach
+
+    for(int i=1;i<n;i++)
+    {
+        arr[i-1]=arr[i];
+
+    }
+    arr[n-1]=temp;
+    return arr;
+
+
+    //Another Approach
    vector<int>result;
 
    int i=1,j=0;
