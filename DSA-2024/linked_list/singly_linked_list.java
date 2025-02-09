@@ -174,6 +174,25 @@ class Node
         }
         return false;*/
     }
+
+    static Node delete_middle_of_ll(Node head)
+    {
+        Node slow=head;
+        Node fast=head;
+        Node prev=null;
+        if(head==null || head.next==null)
+        {
+            return head;
+        }
+        while(fast!=null && fast.next!=null)
+        {
+            fast=fast.next.next;
+            prev=slow;
+            slow=slow.next;
+        }
+        prev.next=slow.next;
+        return head;
+    }
     public static void main(String[] args)
     {
         int n;
@@ -191,6 +210,8 @@ class Node
         print_singly_linked_list(head);
         Node middle_node=middle_of_singly_linked_list(head);
         System.out.println("The data of middle Node is: "+middle_node.data);
+        Node middle_head=delete_middle_of_ll(head);
+        print_singly_linked_list(middle_head);
         Node new_head=reverse_singly_linked_list(head);
         System.out.println("head of reversed linked list: "+new_head.data);
         boolean cycle=cycle_in_linked_list(head);
@@ -201,6 +222,7 @@ class Node
         else{
             System.out.println("No Loop Detected");
         }
+        
     }
 }
 
