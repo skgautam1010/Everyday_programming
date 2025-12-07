@@ -1,5 +1,5 @@
 
-//Leetcode -796
+//Leetcode -796 -string is a rotation or not
 
 class Solution {
     public boolean rotateString(String s, String goal) {
