@@ -1,4 +1,7 @@
-List<Integer>answer = new LinkedList<>();
+import java.util.*;
+class MinimumHeaviestSet {
+    public static List<Integer> reverseIntegers(List<Integer> arr) {
+        List<Integer>answer = new LinkedList<>();
     Collections.sort(arr);
     int n = arr.size();
     if(n==1 || n==0) {
@@ -22,3 +25,6 @@ List<Integer>answer = new LinkedList<>();
     }
     Collections.reverse(answer);
     return answer;
+    }
+    
+}

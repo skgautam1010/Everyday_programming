@@ -2,7 +2,6 @@
 // Initial Template for Java
 
 import java.util.*;
-import java.io.*;
 
 // a node of the doubly linked list
 class Node {
@@ -68,6 +67,7 @@ class GFG {
         
 System.out.println("~");
 }
+sc.close();
     }
 }
 
@@ -89,7 +89,7 @@ class Node
 	}
 }*/
 class Solution {
-    static Node deleteAllOccurOfX(Node head, int x) {
+    Node deleteAllOccurOfX(Node head, int x) {
         // Write your code here
         Node temp = head;
          Node nextToMove = null;
