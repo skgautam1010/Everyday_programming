@@ -1,10 +1,10 @@
 //{ Driver Code Starts
 //Initial Template for Java
 
-import java.util.*;
+
 import java.io.*;
 
-public class Main{
+class Main{
     static BufferedReader br;
     static PrintWriter ot;
     public static void main(String args[]) throws IOException{

@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public boolean isIsomorphic(String s, String t) {
         if(s.length() != t.length()) {

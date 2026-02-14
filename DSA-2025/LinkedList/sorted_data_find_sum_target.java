@@ -17,7 +17,6 @@ class Node
     
     public static Node inputList(BufferedReader br) throws IOException
     {
-        int n = Integer.parseInt(br.readLine().trim()); // Length of Linked List
         
         String[] s = br.readLine().trim().split(" ");
         Node head = new Node(Integer.parseInt(s[0])), tail = head;
@@ -130,7 +129,7 @@ Node.printList(Node node);
 */
 
 class Solution {
-    public static ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, Node head) {
+    public ArrayList<ArrayList<Integer>> findPairsWithGivenSum(int target, Node head) {
         // code here
         
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
