@@ -22,7 +22,7 @@ class Air implements Logistics {
 
 class LogisticsFactory {
     public static Logistics getLogistics(String mode) {
-        if(mode =="air") {
+        if(mode.equals("air")) {
             return new Air();
         }
         return new Road();
