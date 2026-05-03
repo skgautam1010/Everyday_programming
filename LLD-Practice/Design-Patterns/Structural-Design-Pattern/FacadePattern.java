@@ -1,0 +1,74 @@
+
+
+class PaymentService {
+    public void makePayment(String accountId, double amount) {
+        System.out.println("Payment of ₹" + amount + " successful for account" + accountId);
+    }
+}
+
+class SeatReservationService {
+    public void reserveSeat(String movieId, String seatNumber) {
+        System.out.println("Seat " + seatNumber + " reserved for movie " + movieId);
+    }
+}
+
+class NotificationService {
+    public void sendBookingConfirmation(String userEmail) {
+        System.out.println("Booking confirmation sent to " + userEmail);
+    }
+}
+
+class LoyaltyPointsService {
+    public void addPoints(String accountId, int points) {
+        System.out.println(points + " loyalty points added to account " + accountId);
+    }
+}
+
+class TicketService {
+    public void generateTicket(String movieId, String seatNumber) {
+        System.out.println("Ticket generated for movie " + movieId + ", Seat: " + seatNumber);
+    }
+}
+
+
+class MovieBookingFacade {
+    private PaymentService paymentService;
+    private SeatReservationService seatReservationService;
+    private NotificationService notificationService;
+    private LoyaltyPointsService loyaltyPointsService;
+    private TicketService ticketService;
+
+    public MovieBookingFacade() {
+        this.paymentService = new PaymentService();
+        this.seatReservationService = new SeatReservationService();
+        this.notificationService = new NotificationService();
+        this.loyaltyPointsService = new LoyaltyPointsService();
+        this.ticketService = new TicketService();
+    }
+
+    public void bookMovieTicket(String accountId, double amount, String movieId, String seatNumber, String userEmail) {
+        paymentService.makePayment(accountId, amount);
+        seatReservationService.reserveSeat(movieId, seatNumber);
+        ticketService.generateTicket(movieId, seatNumber);
+        loyaltyPointsService.addPoints(accountId, 50);
+        notificationService.sendBookingConfirmation(userEmail);
+
+
+        System.out.println("Movie ticket booking completed successfully!");
+    }
+
+}
+
+
+
+public class FacadePattern {
+    public static void main(String[] args) {
+     MovieBookingFacade mbf = new MovieBookingFacade();
+     String accountId = "333frfrfrf";
+     String movieId = "testttttt2efe";
+     String seatNumber = "test1";
+     double amount = 30.00;
+     String userEmail = "test@frr.cl";
+     mbf.bookMovieTicket(accountId, amount, movieId, seatNumber, userEmail);   
+    }
+}
